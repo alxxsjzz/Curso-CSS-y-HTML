@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vh;
+  background-color: black;
+}
+body .contenedor {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+body .contenedor .bubbles {
+  position: relative;
+  display: flex;
+}
+body .contenedor .bubbles span {
+  position: relative;
+  min-width: 30px;
+  height: 30px;
+  background: #fff;
+  box-shadow: 0 0 0 10px #FFB1C9, 0 0 50px #f434e2, 0 0 100px #ffc3f9;
+  margin: 0 4px;
+  border-radius: 50%;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(100s / var(--i));
+}
+body .contenedor .bubbles span:nth-child(even) {
+  background: orangered;
+  box-shadow: 0 0 0 10px orange, 0 0 50px red, 0 0 100px rosybrown;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}/*# sourceMappingURL=style.css.map */
